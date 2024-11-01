@@ -1,0 +1,1283 @@
+{
+    "PB1 Winder": {
+        "13295": {
+            "PullRate": 390.333142918449,
+            "InfrequentDelay": 194.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13274": {
+            "PullRate": 308.8927130484979,
+            "InfrequentDelay": 99.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13431": {
+            "PullRate": 425.5693209519912,
+            "InfrequentDelay": 325.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "10688": {
+            "PullRate": 223.961521612128,
+            "InfrequentDelay": 278.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "11323": {
+            "PullRate": 206.30821293517565,
+            "InfrequentDelay": 263.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13591": {
+            "PullRate": 317.6866766554111,
+            "InfrequentDelay": 149.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "12434": {
+            "PullRate": 448.3067795480841,
+            "InfrequentDelay": 3460.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "10108": {
+            "PullRate": 264.1953963637338,
+            "InfrequentDelay": 39.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13757": {
+            "PullRate": 307.21931052561484,
+            "InfrequentDelay": 94.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13979": {
+            "PullRate": 387.47457798771484,
+            "InfrequentDelay": 85.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13980": {
+            "PullRate": 358.92379925344926,
+            "InfrequentDelay": 672.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13860": {
+            "PullRate": 403.47333797166243,
+            "InfrequentDelay": 409.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13972": {
+            "PullRate": 412.67518312753236,
+            "InfrequentDelay": 296.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13973": {
+            "PullRate": 294.73425206587336,
+            "InfrequentDelay": 16.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13861": {
+            "PullRate": 254.02216924280864,
+            "InfrequentDelay": 525.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 229.5,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Incomplete"
+        },
+        "13859": {
+            "PullRate": 279.19724569205476,
+            "InfrequentDelay": 73.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14232": {
+            "PullRate": 244.18494552320692,
+            "InfrequentDelay": 115.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "PB2 Winder": {
+        "13275": {
+            "PullRate": 383.3136757977929,
+            "InfrequentDelay": 273.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13758": {
+            "PullRate": 405.0002079832014,
+            "InfrequentDelay": 1419.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13292": {
+            "PullRate": 321.9275479849094,
+            "InfrequentDelay": 1979.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13298": {
+            "PullRate": 416.612598119618,
+            "InfrequentDelay": 116.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "11323": {
+            "PullRate": 226.9612663148683,
+            "InfrequentDelay": 56.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13756": {
+            "PullRate": 390.8617984352577,
+            "InfrequentDelay": 16.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13450": {
+            "PullRate": 252.3904190107646,
+            "InfrequentDelay": 212.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "12437": {
+            "PullRate": 462.761292486874,
+            "InfrequentDelay": 1815.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13294": {
+            "PullRate": 371.80956507534455,
+            "InfrequentDelay": 835.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13961": {
+            "PullRate": 336.07963285302543,
+            "InfrequentDelay": 220.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13969": {
+            "PullRate": 438.87191870627566,
+            "InfrequentDelay": 22.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13971": {
+            "PullRate": 318.6798463800677,
+            "InfrequentDelay": 71.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13966": {
+            "PullRate": 376.3023591186017,
+            "InfrequentDelay": 426.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13866": {
+            "PullRate": 302.058409502675,
+            "InfrequentDelay": 684.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13862": {
+            "PullRate": 306.0385088741374,
+            "InfrequentDelay": 270.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13967": {
+            "PullRate": 431.155366012068,
+            "InfrequentDelay": 179.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13977": {
+            "PullRate": 330.88864451967544,
+            "InfrequentDelay": 338.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "14124": {
+            "PullRate": 444.6657537202745,
+            "InfrequentDelay": 436.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13859": {
+            "PullRate": 276.5684702262609,
+            "InfrequentDelay": 328.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 527.7692307692307,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Incomplete"
+        },
+        "14221": {
+            "PullRate": 289.61488277360496,
+            "InfrequentDelay": 547.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "14231": {
+            "PullRate": 324.6850792321987,
+            "InfrequentDelay": 1072.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "PB3 Winder": {
+        "12435": {
+            "PullRate": 420.6083084109382,
+            "InfrequentDelay": 295.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "12438": {
+            "PullRate": 433.05770208478816,
+            "InfrequentDelay": 713.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13290": {
+            "PullRate": 390.7893169389008,
+            "InfrequentDelay": 369.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "12432": {
+            "PullRate": 456.2953990197653,
+            "InfrequentDelay": 467.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "12433": {
+            "PullRate": 482.7636639140021,
+            "InfrequentDelay": 397.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13289": {
+            "PullRate": 323.86767799500666,
+            "InfrequentDelay": 508.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "12436": {
+            "PullRate": 416.22535735054225,
+            "InfrequentDelay": 228.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13500": {
+            "PullRate": 282.5485755131845,
+            "InfrequentDelay": 243.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13592": {
+            "PullRate": 233.66892994857065,
+            "InfrequentDelay": 340.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13756": {
+            "PullRate": 248.14924950069317,
+            "InfrequentDelay": 919.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "12437": {
+            "PullRate": 404.910593136305,
+            "InfrequentDelay": 444.09090909090907,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Incomplete"
+        },
+        "13963": {
+            "PullRate": 345.1354816187811,
+            "InfrequentDelay": 627.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13968": {
+            "PullRate": 404.42619149773697,
+            "InfrequentDelay": 247.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13870": {
+            "PullRate": 383.33545626027376,
+            "InfrequentDelay": 239.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13868": {
+            "PullRate": 261.072706753589,
+            "InfrequentDelay": 410.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14037": {
+            "PullRate": 421.1676717763067,
+            "InfrequentDelay": 56.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13871": {
+            "PullRate": 549.2874728231442,
+            "InfrequentDelay": 355.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13983": {
+            "PullRate": 260.7026347289692,
+            "InfrequentDelay": 395.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13867": {
+            "PullRate": 509.65118595727813,
+            "InfrequentDelay": 592.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13869": {
+            "PullRate": 293.5700224243408,
+            "InfrequentDelay": 270.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14153": {
+            "PullRate": 329.85727117260416,
+            "InfrequentDelay": 215.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "PB4 Winder": {
+        "10109": {
+            "PullRate": 387.3395966011098,
+            "InfrequentDelay": 3185.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "10073": {
+            "PullRate": 351.24829499936214,
+            "InfrequentDelay": 1006.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13450": {
+            "PullRate": 313.55322794136634,
+            "InfrequentDelay": 607.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "10104": {
+            "PullRate": 373.4499089961561,
+            "InfrequentDelay": 112.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13778": {
+            "PullRate": 395.4802510553781,
+            "InfrequentDelay": 798.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "10395": {
+            "PullRate": 215.05839486395135,
+            "InfrequentDelay": 880.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 590.1333333333333,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Incomplete"
+        },
+        "13863": {
+            "PullRate": 426.02272817074777,
+            "InfrequentDelay": 124.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13862": {
+            "PullRate": 354.2213902939211,
+            "InfrequentDelay": 270.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13872": {
+            "PullRate": 382.5647781618064,
+            "InfrequentDelay": 27.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13865": {
+            "PullRate": 431.2241990852959,
+            "InfrequentDelay": 211.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13811": {
+            "PullRate": 405.5442285079543,
+            "InfrequentDelay": 91.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13864": {
+            "PullRate": 375.4935803651712,
+            "InfrequentDelay": 529.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14234": {
+            "PullRate": 418.9235633745371,
+            "InfrequentDelay": 243.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14231": {
+            "PullRate": 366.58929135912985,
+            "InfrequentDelay": 8.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14233": {
+            "PullRate": 354.7468406403622,
+            "InfrequentDelay": 1578.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14235": {
+            "PullRate": 462.4232659131572,
+            "InfrequentDelay": 63.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "PB5 Winder": {
+        "13271": {
+            "PullRate": 399.06107405316675,
+            "InfrequentDelay": 212.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13450": {
+            "PullRate": 249.16910714009762,
+            "InfrequentDelay": 983.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13296": {
+            "PullRate": 459.23091250040216,
+            "InfrequentDelay": 320.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13276": {
+            "PullRate": 466.7770424362016,
+            "InfrequentDelay": 5925.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 693.4,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "10109": {
+            "PullRate": 311.3812950326849,
+            "InfrequentDelay": 296.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13481": {
+            "PullRate": 335.03106009072525,
+            "InfrequentDelay": 105.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13291": {
+            "PullRate": 416.86220740455343,
+            "InfrequentDelay": 495.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13293": {
+            "PullRate": 488.59417153849336,
+            "InfrequentDelay": 92.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "12432": {
+            "PullRate": 374.2377683540266,
+            "InfrequentDelay": 462.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13290": {
+            "PullRate": 425.1867628418941,
+            "InfrequentDelay": 852.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13965": {
+            "PullRate": 438.4212065343043,
+            "InfrequentDelay": 28.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13962": {
+            "PullRate": 427.897635580862,
+            "InfrequentDelay": 257.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13982": {
+            "PullRate": 418.37370820393204,
+            "InfrequentDelay": 85.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13974": {
+            "PullRate": 375.4586269758222,
+            "InfrequentDelay": 911.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13981": {
+            "PullRate": 284.00729480473325,
+            "InfrequentDelay": 85.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13964": {
+            "PullRate": 445.53980710400384,
+            "InfrequentDelay": 471.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13968": {
+            "PullRate": 471.0767239756098,
+            "InfrequentDelay": 476.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13862": {
+            "PullRate": 396.8336355439657,
+            "InfrequentDelay": 1544.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13870": {
+            "PullRate": 484.89721477515855,
+            "InfrequentDelay": 66.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13871": {
+            "PullRate": 445.42051380851086,
+            "InfrequentDelay": 773.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14152": {
+            "PullRate": 412.0207939938908,
+            "InfrequentDelay": 603.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "14231": {
+            "PullRate": 345.74859438690277,
+            "InfrequentDelay": 114.0,
+            "Plies": 1.0,
+            "Grade": "Grade6",
+            "DataCompleteness": "Complete"
+        },
+        "13983": {
+            "PullRate": 223.08452842255278,
+            "InfrequentDelay": 87.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "PB6 Winder": {
+        "13301": {
+            "PullRate": 447.09469976814245,
+            "InfrequentDelay": 498.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13291": {
+            "PullRate": 333.67603361115545,
+            "InfrequentDelay": 884.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13308": {
+            "PullRate": 605.7008224865318,
+            "InfrequentDelay": 1905.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13289": {
+            "PullRate": 346.64030490230806,
+            "InfrequentDelay": 4.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13293": {
+            "PullRate": 345.3009092560371,
+            "InfrequentDelay": 119.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13276": {
+            "PullRate": 310.09474388304085,
+            "InfrequentDelay": 424.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13310": {
+            "PullRate": 569.6798072560499,
+            "InfrequentDelay": 182.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13302": {
+            "PullRate": 467.73002836908546,
+            "InfrequentDelay": 86.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13311": {
+            "PullRate": 630.9382981413905,
+            "InfrequentDelay": 48.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13299": {
+            "PullRate": 426.3655382098021,
+            "InfrequentDelay": 152.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13312": {
+            "PullRate": 482.8880435523013,
+            "InfrequentDelay": 907.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13949": {
+            "PullRate": 583.4395422495421,
+            "InfrequentDelay": 375.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13964": {
+            "PullRate": 388.9737719857574,
+            "InfrequentDelay": 27.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13974": {
+            "PullRate": 291.9146752923943,
+            "InfrequentDelay": 165.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13948": {
+            "PullRate": 589.76900470405,
+            "InfrequentDelay": 33.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13945": {
+            "PullRate": 466.33349836915096,
+            "InfrequentDelay": 975.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13962": {
+            "PullRate": 390.2919184710247,
+            "InfrequentDelay": 374.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13971": {
+            "PullRate": 344.35850521166907,
+            "InfrequentDelay": 207.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13969": {
+            "PullRate": 209.45019496037753,
+            "InfrequentDelay": 321.0,
+            "Plies": 1.0,
+            "Grade": "Grade4",
+            "DataCompleteness": "Complete"
+        },
+        "13944": {
+            "PullRate": 560.2542063591095,
+            "InfrequentDelay": 656.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13943": {
+            "PullRate": 394.1361333476655,
+            "InfrequentDelay": 32.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "14206": {
+            "PullRate": 635.6972123052674,
+            "InfrequentDelay": 123.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "14198": {
+            "PullRate": 652.215376954697,
+            "InfrequentDelay": 168.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "14205": {
+            "PullRate": 647.553048934306,
+            "InfrequentDelay": 121.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "14208": {
+            "PullRate": 543.9863507338061,
+            "InfrequentDelay": 417.4,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Incomplete"
+        }
+    },
+    "L07 Winder": {
+        "13258": {
+            "PullRate": 556.7695466251204,
+            "InfrequentDelay": 219.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13807": {
+            "PullRate": 490.30242644396077,
+            "InfrequentDelay": 324.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "14166": {
+            "PullRate": 538.0673318332633,
+            "InfrequentDelay": 536.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 359.6666666666667,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Incomplete"
+        }
+    },
+    "L08 Winder": {
+        "13385": {
+            "PullRate": 673.6202928014187,
+            "InfrequentDelay": 1277.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13272": {
+            "PullRate": 632.4034060029138,
+            "InfrequentDelay": 466.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13258": {
+            "PullRate": 661.9413527886015,
+            "InfrequentDelay": 1299.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 1097.857142857143,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Incomplete"
+        },
+        "13551": {
+            "PullRate": 685.7403178935838,
+            "InfrequentDelay": 619.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13807": {
+            "PullRate": 660.4506585074786,
+            "InfrequentDelay": 455.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13808": {
+            "PullRate": 747.0465253050411,
+            "InfrequentDelay": 3254.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        },
+        "13809": {
+            "PullRate": 812.7014802853297,
+            "InfrequentDelay": 315.0,
+            "Plies": 2.0,
+            "Grade": "Grade5",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "L09 Winder": {
+        "9505": {
+            "PullRate": 270.69558361239956,
+            "InfrequentDelay": 1237.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "10678": {
+            "PullRate": 490.9666528207943,
+            "InfrequentDelay": 299.0,
+            "Plies": 2.0,
+            "Grade": "Grade1",
+            "DataCompleteness": "Complete"
+        },
+        "12446": {
+            "PullRate": 369.05590413663475,
+            "InfrequentDelay": 334.0,
+            "Plies": 2.0,
+            "Grade": "Grade1",
+            "DataCompleteness": "Complete"
+        },
+        "11510": {
+            "PullRate": 587.8772312290972,
+            "InfrequentDelay": 27.0,
+            "Plies": 2.0,
+            "Grade": "Grade1",
+            "DataCompleteness": "Complete"
+        },
+        "13277": {
+            "PullRate": 403.14910294287785,
+            "InfrequentDelay": 168.0,
+            "Plies": 2.0,
+            "Grade": "Grade1",
+            "DataCompleteness": "Complete"
+        },
+        "10677": {
+            "PullRate": 224.17351988820369,
+            "InfrequentDelay": 234.0,
+            "Plies": 2.0,
+            "Grade": "Grade1",
+            "DataCompleteness": "Complete"
+        },
+        "13820": {
+            "PullRate": 428.7199721662111,
+            "InfrequentDelay": 290.0,
+            "Plies": 2.0,
+            "Grade": "Grade1",
+            "DataCompleteness": "Complete"
+        },
+        "13817": {
+            "PullRate": 303.03722973391183,
+            "InfrequentDelay": 573.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "13819": {
+            "PullRate": 286.86640667315567,
+            "InfrequentDelay": 905.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Incomplete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 905.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "L10 Winder": {
+        "11491": {
+            "PullRate": 270.5043596065015,
+            "InfrequentDelay": 813.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "10889": {
+            "PullRate": 255.14089374767696,
+            "InfrequentDelay": 111.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "9504": {
+            "PullRate": 352.1384870560473,
+            "InfrequentDelay": 175.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 288.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "9505": {
+            "PullRate": 420.9848546543936,
+            "InfrequentDelay": 135.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "13817": {
+            "PullRate": 289.1936032479837,
+            "InfrequentDelay": 247.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "13818": {
+            "PullRate": 158.03877903667032,
+            "InfrequentDelay": 381.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "13816": {
+            "PullRate": 235.91089103509898,
+            "InfrequentDelay": 102.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "13819": {
+            "PullRate": 301.45961290869155,
+            "InfrequentDelay": 340.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "L11 Winder": {
+        "12946": {
+            "PullRate": 369.40389517616353,
+            "InfrequentDelay": 2133.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "10509": {
+            "PullRate": 475.7332505097633,
+            "InfrequentDelay": 958.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "9504": {
+            "PullRate": 543.1020004404996,
+            "InfrequentDelay": 801.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "11491": {
+            "PullRate": 516.9899295664101,
+            "InfrequentDelay": 833.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "12444": {
+            "PullRate": NaN,
+            "InfrequentDelay": 806.4285714285714,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Incomplete"
+        },
+        "13816": {
+            "PullRate": 500.291657329293,
+            "InfrequentDelay": 256.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "13817": {
+            "PullRate": 518.0041811023326,
+            "InfrequentDelay": 332.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        },
+        "13819": {
+            "PullRate": 504.4160748378825,
+            "InfrequentDelay": 332.0,
+            "Plies": 1.0,
+            "Grade": "Grade3",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "CFR1 Parent Rolls": {
+        "12117": {
+            "PullRate": 295.8340610289837,
+            "InfrequentDelay": 319.0,
+            "Plies": 1.0,
+            "Grade": "Grade2",
+            "DataCompleteness": "Complete"
+        },
+        "12119": {
+            "PullRate": 210.83038111530814,
+            "InfrequentDelay": 48.0,
+            "Plies": 1.0,
+            "Grade": "Grade2",
+            "DataCompleteness": "Complete"
+        },
+        "921": {
+            "PullRate": 296.6315450627167,
+            "InfrequentDelay": 78.0,
+            "Plies": 1.0,
+            "Grade": "Grade2",
+            "DataCompleteness": "Complete"
+        }
+    },
+    "TM3 Machine": {
+        "391": {
+            "PullRate": -2531.57962962963,
+            "InfrequentDelay": 4.0,
+            "Grade": "Grade5"
+        },
+        "3955": {
+            "PullRate": -2395.553516819572,
+            "InfrequentDelay": 236.0,
+            "Grade": "Grade4"
+        },
+        "6507": {
+            "PullRate": -2254.2481254260397,
+            "InfrequentDelay": 58.0,
+            "Grade": "Grade2"
+        },
+        "2516": {
+            "PullRate": NaN,
+            "InfrequentDelay": NaN,
+            "Grade": NaN
+        },
+        "1713": {
+            "PullRate": -2730.9777052746053,
+            "InfrequentDelay": 0.0,
+            "Grade": "Grade6"
+        }
+    },
+    "BI4 Machine": {
+        "1251": {
+            "PullRate": -2670.994601307975,
+            "InfrequentDelay": 25.0,
+            "Grade": "Grade3"
+        },
+        "1253": {
+            "PullRate": -2428.3115940733946,
+            "InfrequentDelay": 1110.0,
+            "Grade": "Grade6"
+        },
+        "10077": {
+            "PullRate": -2399.551874145594,
+            "InfrequentDelay": 23.0,
+            "Grade": "Grade5"
+        },
+        "10520": {
+            "PullRate": -2826.8269081867943,
+            "InfrequentDelay": 9.0,
+            "Grade": "Grade1"
+        },
+        "1592": {
+            "PullRate": NaN,
+            "InfrequentDelay": 95.0,
+            "Grade": NaN
+        },
+        "1252": {
+            "PullRate": -2704.93845539726,
+            "InfrequentDelay": 170.0,
+            "Grade": "Grade4"
+        },
+        "5914": {
+            "PullRate": -2477.5518981008513,
+            "InfrequentDelay": 19.0,
+            "Grade": "Grade2"
+        },
+        "13812": {
+            "PullRate": NaN,
+            "InfrequentDelay": 27.0,
+            "Grade": NaN
+        },
+        "2516": {
+            "PullRate": NaN,
+            "InfrequentDelay": 24.0,
+            "Grade": NaN
+        }
+    }
+}

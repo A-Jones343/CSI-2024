@@ -1,0 +1,168 @@
+{
+    "PB1 Winder": {
+        "13980": {
+            "Feet/Log": 119.867,
+            "Rolls/Log": 26.0
+        },
+        "13979": {
+            "Feet/Log": 119.867,
+            "Rolls/Log": 26.0
+        },
+        "13861": {
+            "Feet/Log": 39.39,
+            "Rolls/Log": 26.0
+        }
+    },
+    "PB2 Winder": {
+        "13971": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "13961": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "13966": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "13756": {
+            "Feet/Log": 77.303,
+            "Rolls/Log": 26.0
+        }
+    },
+    "PB3 Winder": {
+        "13867": {
+            "Feet/Log": 142.224,
+            "Rolls/Log": 26.0
+        },
+        "13868": {
+            "Feet/Log": 142.224,
+            "Rolls/Log": 26.0
+        },
+        "13963": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "14153": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "13869": {
+            "Feet/Log": 142.224,
+            "Rolls/Log": 26.0
+        }
+    },
+    "PB4 Winder": {
+        "14235": {
+            "Feet/Log": 77.303,
+            "Rolls/Log": 26.0
+        },
+        "14233": {
+            "Feet/Log": 77.303,
+            "Rolls/Log": 26.0
+        },
+        "14234": {
+            "Feet/Log": 77.303,
+            "Rolls/Log": 26.0
+        }
+    },
+    "PB5 Winder": {
+        "14152": {
+            "Feet/Log": 77.303,
+            "Rolls/Log": 26.0
+        },
+        "14231": {
+            "Feet/Log": 62.58,
+            "Rolls/Log": 26.0
+        },
+        "13968": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "13870": {
+            "Feet/Log": 142.224,
+            "Rolls/Log": 26.0
+        }
+    },
+    "PB6 Winder": {
+        "14208": {
+            "Feet/Log": 81.654,
+            "Rolls/Log": 26.0
+        },
+        "13974": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "13962": {
+            "Feet/Log": 95.039,
+            "Rolls/Log": 26.0
+        },
+        "14206": {
+            "Feet/Log": 81.654,
+            "Rolls/Log": 26.0
+        }
+    },
+    "L07 Winder": {
+        "14166": {
+            "Feet/Log": 90.02,
+            "Rolls/Log": 26.0
+        },
+        "13807": {
+            "Feet/Log": 81.654,
+            "Rolls/Log": 26.0
+        }
+    },
+    "L08 Winder": {
+        "13807": {
+            "Feet/Log": 81.654,
+            "Rolls/Log": 26.0
+        }
+    },
+    "L09 Winder": {
+        "13820": {
+            "Feet/Log": 40.8,
+            "Rolls/Log": 9.0
+        },
+        "13277": {
+            "Feet/Log": 81.2,
+            "Rolls/Log": 9.0
+        },
+        "11510": {
+            "Feet/Log": 54.134,
+            "Rolls/Log": 9.0
+        },
+        "13817": {
+            "Feet/Log": 49.213,
+            "Rolls/Log": 9.0
+        }
+    },
+    "L10 Winder": {
+        "13818": {
+            "Feet/Log": 49.213,
+            "Rolls/Log": 9.0
+        },
+        "13816": {
+            "Feet/Log": 43.307,
+            "Rolls/Log": 9.0
+        },
+        "13817": {
+            "Feet/Log": 49.213,
+            "Rolls/Log": 9.0
+        }
+    },
+    "L11 Winder": {
+        "13817": {
+            "Feet/Log": 49.213,
+            "Rolls/Log": 9.0
+        }
+    },
+    "CFR1 Parent Rolls": {
+        "12117": {
+            "CFR1 Sheet Width": 102.0
+        },
+        "12119": {
+            "CFR1 Sheet Width": 102.0
+        }
+    }
+}
