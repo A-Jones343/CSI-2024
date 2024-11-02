@@ -658,7 +658,7 @@ def officialScorer(situationDate, convertGrade, scheduleOver, simulate, plot):
     #print("Finished")
     return (totalScore, scoringBreakdown)
     
-situationDate='2024-09-06 Week 1'
+#situationDate='2024-09-06 Week 1'
 #situationDate='2024-10-09'
 
 #totalScore, scoringBreakdown = officialScorer(situationDate, False, False, False, False)
