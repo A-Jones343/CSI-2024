@@ -1,0 +1,8 @@
+            Machine     ID     PullRate   Plies   Grade  ScrapFactor  ProductPerMinute FeetPerLog RollPerLog SheetWidth        Length       Weight      Time      Demand
+0         BI4 Machine   5914 -2477.551898  None  Grade2     0.016226          0.156964       None       None       None  16370.707317  3334.195122      1516      238.0
+1         BI4 Machine   1252 -2704.938455  None  Grade4     0.011281          0.234756       None       None       None  13765.013333  3320.966667      3476      816.0
+2         BI4 Machine  10520 -2826.826908  None  Grade1     0.020863          0.144789       None       None       None  18313.028571  2354.757143      1071      155.0
+3         BI4 Machine   1251 -2670.994601  None  Grade3     0.021850          0.191486       None       None       None  13708.510638  2567.111702      3290      630.0
+
+4         TM3 Machine   1713 -2730.977705  None  Grade6     0.010574          0.198449       None       None       None  18182.967213  3305.081967      4879      968.2836239515
+5         TM3 Machine    391 -2531.579630  None  Grade5     0.016562          0.159035       None       None       None  21271.000000  2866.727273      6439      1024.0

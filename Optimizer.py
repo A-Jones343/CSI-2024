@@ -8,7 +8,7 @@ Machine = Reader(Week, True)
 #Available = Available(Week)
 
 print(Machine)
-#totalScore, scoringBreakdown = officialScorer(Week, False, False, False, False)
+#totalScore, scoringBreakdown = officialScorer(Week, False, True, False, False)
 
 #print(pd.Series(scoringBreakdown))
 #print(totalScore)
