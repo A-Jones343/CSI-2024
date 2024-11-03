@@ -342,70 +342,77 @@ def search(Foldername, col, key, returnCell):
     return df.at[index, returnCell]
 
 
-def getTmDemand(Foldername, id, list, time):
+def getTmDemand(Foldername, id, list, demand):
+    df = Reader(Foldername, False)
+    grade = search(Foldername, "ID", id, "Grade")
+    index = (df[(df["Grade"].isin([grade]) & df["Machine"].isin(["BI4 Machine", "TM3 Machine"]))]).index
+
+    Mppm = df.at[index[0], "ProductPerMinute"]
+
+
+    if(grade == "Grade1"):
+        list[0].time += getTMTime(Foldername, id, demand)
+        list[0].demand = (Mppm * list[0].time)
+        list[0].grade = "Grade1"
+        
+
+    if(grade == "Grade2"):
+        list[1].time += getTMTime(Foldername, id, demand)
+        list[1].demand = (Mppm * list[1].time)
+        list[1].grade = "Grade2"
+
+
+    if(grade == "Grade3"):
+        list[2].time += getTMTime(Foldername, id, demand)
+        list[2].demand = (Mppm * list[2].time)
+        list[2].grade = "Grade3"
+        
+
+    if(grade == "Grade4"):
+        list[3].time += getTMTime(Foldername, id, demand)
+        list[3].demand = (Mppm * list[3].time)
+        list[3].grade = "Grade4"
+        
+
+    if(grade == "Grade5"):
+        list[4].time += getTMTime(Foldername, id, demand)
+        list[4].demand = (Mppm * list[4].time)
+        list[4].grade = "Grade5"
+        
+
+    if(grade == "Grade6"):
+        list[5].time += getTMTime(Foldername, id, demand)
+        list[5].demand = (Mppm * list[5].time)
+        list[5].grade = "Grade6"
+        
+
+    return tuple(list)
+
+
+def getTMTime(Foldername, id, demand):
     machine = search(Foldername, "ID", id, "Machine")
     grade = search(Foldername, "ID", id, "Grade")
-    Mppm = search(Foldername, "Grade", grade, "ProductPerMinute")
 
     sw = search(Foldername, "ID", id, "SheetWidth")
 
-    weight = search(Foldername, "ID", id, "Weight")
-    length = search(Foldername, "ID", id, "Length")
+    df = Reader(Foldername, False)
+    grade = search(week, "ID", id, "Grade")
+    index = (df[(df["Grade"].isin([grade]) & df["Machine"].isin(["BI4 Machine", "TM3 Machine"]))]).index
+
+    weight = df.at[index[0], "Weight"]
+    length = df.at[index[0], "Length"]
+    ppm = df.at[index[0], "ProductPerMinute"]
 
     plies = search(Foldername, "ID", id, "Plies")
     fpl = search(Foldername, "ID", id, "FeetPerLog")
     rpl = search(Foldername, "ID", id, "RollPerLog")
 
-    ppm = search(Foldername, "ID", id, "ProductPerMinute")
 
     if(machine == "CFR1 Parent Rolls"):
-        yardage = time * ppm * 36000 / 102.2
+        return ((weight * demand * 36_000) / (sw * ppm * 2204.62 * length))
     
     elif(machine != "TM3 Machine" and machine != "BI4 Machine" and machine != "CFR1 Parent Rolls"):
-        yardage = time * ppm * fpl * plies / 3 / rpl
-
-    
-    # get Time Amnt:
-    time = yardage / (Mppm * 2204.62 / weight * length)
-
-
-    grade = search(Foldername, "ID", id, "Grade")
-    print("MPPM", Mppm, "TIME", time , "DEMAND", Mppm * time, "GRADE", grade)
-    
-    if(grade == "Grade1"):
-        list[0].demand = list[0].demand + (Mppm * time)
-        list[0].grade = "Grade1"
-        list[0].time = time
-
-    if(grade == "Grade2"):
-        list[1].demand = list[1].demand + (Mppm * time)
-        list[1].grade = "Grade2"
-        list[1].time = time
-
-    if(grade == "Grade3"):
-        list[2].demand = list[2].demand + (Mppm * time)
-        list[2].grade = "Grade3"
-        list[2].time = time
-
-    if(grade == "Grade4"):
-        list[3].demand = list[3].demand + (Mppm * time)
-        list[3].grade = "Grade4"
-        list[3].time = time
-
-    if(grade == "Grade5"):
-        list[4].demand = list[4].demand + (Mppm * time)
-        list[4].grade = "Grade5"
-        list[4].time = time
-
-    if(grade == "Grade6"):
-        list[5].demand = list[5].demand + (Mppm * time)
-        list[5].grade = "Grade6"
-        list[5].time = time
-
-
-    for obj in list:
-        print("TIME", obj.time, "DEMAND", obj.demand, "GRADE", obj.grade)
-    return tuple(list)
+        return ((weight * demand * fpl * plies) / (3 * rpl * ppm * 2204.62 * length))
 
 
 week = "2024-09-06 Week 1"
@@ -414,9 +421,12 @@ TmDemand = []
 for i in range(6):
     TmDemand.append(DemandTm())
 
-for id, demand in demandReader("2024-09-06 Week 1"):
-    time = demand / search(week, "ID", id, "ProductPerMinute")
-    print(time, search(week, "ID", id, "Machine"), id, search(week, "ID", id, "Grade") , search(week, "ID", id, "Plies"))
+for id, demand in demandReader(week):
+    getTmDemand(week, id, TmDemand, demand)
+
+
+for obj in TmDemand:
+    print(obj.grade, obj.demand, obj.time/60)
 
 
 
