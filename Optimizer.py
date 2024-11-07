@@ -4,10 +4,10 @@ import pandas as pd
 
 Week = "2024-09-06 Week 1"
 
-Machine = Reader(Week, True)
-#Available = Available(Week)
+#Machine = Reader(Week, True)
+Available = Available(Week)
 
-print(Machine)
+#print(Available)
 #totalScore, scoringBreakdown = officialScorer(Week, False, True, False, False)
 
 #print(pd.Series(scoringBreakdown))

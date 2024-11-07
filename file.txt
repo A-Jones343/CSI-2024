@@ -6,3 +6,40 @@
 
 4         TM3 Machine   1713 -2730.977705  None  Grade6     0.010574          0.198449       None       None       None  18182.967213  3305.081967      4879      968.2836239515
 5         TM3 Machine    391 -2531.579630  None  Grade5     0.016562          0.159035       None       None       None  21271.000000  2866.727273      6439      1024.0
+
+class sch:
+    name = ""
+    demand = 0
+    time = 0
+    schedule = None
+
+    def __init__(self, name):
+        self.name = name
+
+
+
+
+list = ["BI4 Machine", "CFR1 Parent Rolls", "L07 Winder", "L08 Winder", "L09 Winder", "L10 Winder", "L11 Winder", "PB1 Winder", "PB2 Winder", "PB3 Winder", "PB4 Winder", "PB5 Winder", "PB6 Winder", "TM3 Machine"]
+
+obj = []
+
+for i in range(len(list)):
+    obj.append(sch(list[i]))
+
+df = Reader(week, False)
+key = demandReader(week)
+
+for i in range(len(key)):
+    id = key[i][0] 
+    demand = key[i][1]
+    name = search(df, week, "ID", id, "Machine")
+
+    for km in obj:
+        if(name == km.name):
+            km.demand += demand
+            km.time = km.demand / search(df, week, "ID", id, "ProductPerMinute")
+        
+
+        
+        #km.schedule = Scheduler(week, km.name)
+

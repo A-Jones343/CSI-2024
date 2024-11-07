@@ -5,17 +5,18 @@ import datetime
 
 
 class Obj:
+    asset = 0
     machine = ""
     id = 0
     pullrate = None
     plies = None
     grade = None
     scrapFactor = 0
-    po = None
+
     quantity = 0
-    conversion = 0
     demand = 0
     rate = 0
+    
     feetPerLog = None
     rollPerLog = None
     sheetWidth = None
@@ -23,14 +24,14 @@ class Obj:
     length = None
     weight = None
 
+
     def __init__(self, machine, id):
         self.machine = machine
         self.id = id
 
 
-class Avail:
+class Schedule:
     machine = ""
-    po = ""
 
     startIPO = None
     endIPO = None
@@ -39,38 +40,29 @@ class Avail:
 
     start = 0
     end = 0
-
-    weekTotal = 0
+    schedule = 0
+    totalTime = 0
     id = 0
     quantity = 0
     grade = ""
-    asset = 0
 
     def __init__(self, asset, machine):
         self.asset = asset
         self.machine = machine
 
 
-class Quantity:
-    quantity = 0
-    id = 0
-    loc = 0
-    machine = ""
+def demandReader(Foldername):
 
-    def __init__(self, quantity, id, loc, machine):
-        self.quantity = quantity
-        self.id = id
-        self.loc = loc
-        self.machine = machine
+    id = []
+    demand = []
+    with open("C:\\Users\\ajone\\OneDrive\\Desktop\\HackathonPackageV2\\HackathonPackageV2\\DataCache\\OptimizerSituations\\" + Foldername + "\\plannedDemandConverting.json", 'r') as f:
+        data = json.load(f)
 
+    for key, val in data.items():
+        id.append(key)
+        demand.append(val)
 
-class DemandTm:
-    grade = ""
-    id = 0
-    demand = 0
-    time = 0
-
-    ppm = 0
+    return (id, demand)
 
 
 def Reader(Foldername, displayMax):
@@ -152,22 +144,71 @@ def Reader(Foldername, displayMax):
                         elif(key == "CFR1 Sheet Width"):
                             obj.sheetWidth = val
 
-    columnName = ["Machine", "ID", "PullRate", "Plies", "Grade", "ScrapFactor", "ProductPerMinute", "FeetPerLog", "RollPerLog", "SheetWidth", "Length", "Weight"]
+    columnName = ["Asset", "Machine", "ID", "PullRate", "Plies", "Grade", "ScrapFactor", "ProductPerMinute", "FeetPerLog", "RollPerLog", "SheetWidth", "Length", "Weight", "Demand", "Time"]
 
     if(displayMax):
         pd.set_option('display.max_rows', None)
     
     df = pd.DataFrame(columns=columnName)
+    TM = ["5914", "1252", "10520", "1251", "1713", "391"]
+
+    Asset = 10000
 
     for obj in list:
         if(math.isnan(obj.pullrate) == False and obj.rate != 0):
-            df = pd.concat([pd.DataFrame([[obj.machine, obj.id, obj.pullrate, obj.plies, obj.grade, 
+            df = pd.concat([pd.DataFrame([[Asset, obj.machine, obj.id, obj.pullrate, obj.plies, obj.grade, 
                                            obj.scrapFactor, obj.rate, obj.feetPerLog, 
-                                           obj.rollPerLog, obj.sheetWidth, obj.length, obj.weight]], columns=columnName), df], ignore_index=True)
+                                           obj.rollPerLog, obj.sheetWidth, obj.length, obj.weight, 0, 0]], columns=columnName), df], ignore_index=True)
+        Asset += 10
             
 
     df = df.where(pd.notnull(df), None)
     df = df.drop((df[(~df["Machine"].isin(["BI4 Machine", "TM3 Machine"])) & (df["FeetPerLog"].isin([None])) & (df["RollPerLog"].isin([None])) & (df["SheetWidth"].isin([None]))]).index)
+
+    TM = df.drop(df[(df['Machine'] != 'TM3 Machine') & (df["Machine"] != 'BI4 Machine')].index)
+
+
+    id, demand = demandReader(week)
+    df = df.drop(df[(~df["ID"].isin(id))].index)
+
+    for index, row in df.iterrows():
+        ID = row["ID"]
+        for i,d in zip(id, demand):
+            if(i == ID):
+                df.at[index, "Demand"] = d
+                df.at[index, "Time"] = d / row["ProductPerMinute"]
+
+    ref = df.drop_duplicates("ID")
+
+    grades = getTMTime(ref, TM)
+
+    for index, row in TM.iterrows():
+        grade = row["Grade"]
+
+        if(grade == "Grade1"):
+            TM.at[index, "Time"] = grades[0]
+        
+        if(grade == "Grade2"):
+            TM.at[index, "Time"] = grades[1]
+        
+        if(grade == "Grade3"):
+            TM.at[index, "Time"] = grades[2]
+        
+        if(grade == "Grade4"):
+            TM.at[index, "Time"] = grades[3]
+        
+        if(grade == "Grade5"):
+            TM.at[index, "Time"] = grades[4]   
+        
+        if(grade == "Grade6"):
+            TM.at[index, "Time"] = grades[5]
+
+
+
+    for index, row in TM.iterrows():
+        TM.at[index, "Demand"] = row["Time"] * row["ProductPerMinute"]
+
+    df = pd.concat([TM, df])
     return df
 
 
@@ -179,7 +220,7 @@ def Available(Foldername):
     for field, attribute in data.items():
         if(field == "ProductionUnit"):
             for asset, machine in attribute.items():
-                obj = Avail(asset, machine)
+                obj = Schedule(asset, machine)
                 list.append(obj)
 
         if(field == "ProcessOrder"):
@@ -220,73 +261,72 @@ def Available(Foldername):
 
     f.close()
 
+    with open("C:\\Users\\ajone\\OneDrive\\Desktop\\HackathonPackageV2\\HackathonPackageV2\\DataCache\\OptimizerSituations\\" + Foldername + "\\reservedTimes.json", 'r') as f:
+        data = json.load(f)
+    
+    rt = []
+
+    for field, attribute in data.items():
+        for asset, machine in attribute.items():
+            if(field == "ProductionUnit"):
+                obj = Schedule(asset, machine)
+                rt.append(obj)
+        
+        
+        for asset, val in zip(attribute.items(), rt):
+            if(field == "ForecastStartTime"):
+                val.startReserve = asset[1]
+
+            if(field == "ForecastEndTime"):
+                val.endReserve = asset[1]
+        
+    for obj in range(0, (len(rt) - 1)):
+        if(rt[obj].machine == rt[obj + 1].machine):
+            rt[obj].startReserve = (rt[obj].startReserve, rt[obj + 1].startReserve)
+            rt[obj].endReserve = (rt[obj].endReserve, rt[obj + 1].endReserve)
+            rt.pop(obj + 1)
+            break
+
+    for i in list:
+        for j in rt:
+            if(i.machine == j.machine):
+                i.startReserve = j.startReserve
+                i.endReserve = j.endReserve
+
+    for obj in list:
+        if(obj.startIPO == None and obj.startReserve == None):
+            obj.schedule = (obj.start, obj.end)
+
+        elif(obj.startIPO != None and obj.startReserve == None):
+            obj.schedule = (obj.endIPO, obj.end)
+        
+        elif(obj.startIPO != None and obj.startReserve != None and type(obj.startReserve) != tuple):
+            obj.schedule = ((obj.endIPO, obj.startReserve), (obj.endReserve, obj.end))
+
+        elif(obj.startIPO != None and obj.startReserve != None and type(obj.startReserve) == tuple):
+            obj.schedule = ((obj.endIPO, obj.startReserve[0]), (obj.endReserve[0], obj.startReserve[1]), (obj.endReserve[1], obj. end))
 
 
+    columnName = ["Machine", "ID", "Start of Initial PO", "End of Initial PO", "Process Order", "Grade", "Quantity", "Start of Reserve Time", "End of Reserve Time", "Schedule"]
 
-    columnName = ["Machine", "ID", "Start of Initial PO", "End of Initial PO", "Process Order", "Grade", "Quantity", "Start of Reserve Time", "End of Reserve Time"]
 
 
     df = pd.DataFrame(columns=columnName)
     
     for obj in list:
-        df = pd.concat([pd.DataFrame([[obj.machine, obj.id, obj.startIPO, obj.endIPO, obj.po, obj.grade, obj.quantity, obj.startReserve, obj.endReserve]], columns=columnName), df], ignore_index=True)
+        #print(obj.startReserve, obj.endReserve)
+        df = pd.concat([pd.DataFrame([[obj.machine, obj.id, obj.startIPO, obj.endIPO, obj.po, obj.grade, obj.quantity, obj.startReserve, obj.endReserve, obj.schedule]], columns=columnName), df], ignore_index=True)
     
-    rt = []
 
-    
-    with open("C:\\Users\\ajone\\OneDrive\\Desktop\\HackathonPackageV2\\HackathonPackageV2\\DataCache\\OptimizerSituations\\" + Foldername + "\\reservedTimes.json", 'r') as f:
-        data = json.load(f)
-
-        for field, attribute in data.items():
-            if(field == "ProductionUnit"):
-                for asset, machine in attribute.items():
-                    for dfMachine in df["Machine"]:
-                        search = df['Machine'].str.contains(machine)
-                        if(machine == dfMachine):
-                            rt.append(df[search].index)
-
-            if(field != "ProductionUnit"):
-                for key, val in attribute.items():
-                    
-                    for i in range(len(rt)):
-                        if(field == "ForecastStartTime"):
-                            df.at[rt[i][0], "Start of Reserve Time"] = val
-                        else:
-                            df.at[rt[i][0], "End of Reserve Time"] = val
     return df
-    
-
-# Total time should be in minutes
-def getQuantity(totalTime, id, Foldername):
-    q = []
-    df = Reader(Foldername, False)
-
-    search = df['ID'].str.contains(id)
-    values = df[search].index
-    for i in range(len(values)):
-        ForcastQ = df.loc[values[i], "ProductPerMinute"] * totalTime
-
-        machine = df.loc[values[i], "Machine"]
-        q.append(Quantity(ForcastQ, id, values[i], machine))
-    return tuple(q)
 
 
 def getTimeDifference(start, end):
     start = datetime.datetime.fromtimestamp(start/1000)
     end = datetime.datetime.fromtimestamp(end/1000)
 
-    return (end - start)
+    return (end - start).seconds / 60
     
-
-def demandReader(Foldername):
-    d = []
-    with open("C:\\Users\\ajone\\OneDrive\\Desktop\\HackathonPackageV2\\HackathonPackageV2\\DataCache\\OptimizerSituations\\" + Foldername + "\\plannedDemandConverting.json", 'r') as f:
-        data = json.load(f)
-    for key, val in data.items():
-        d.append((key, val))
-
-    return tuple(d)
-
 
 def Availibility(Foldername, machine):
     df = Available(Foldername)
@@ -295,7 +335,7 @@ def Availibility(Foldername, machine):
     values = df[search].index
     
     for i in range(len(values)):
-        obj = Avail(None, machine)
+        obj = Schedule(None, machine)
         #if(df.loc[values[i], "Start of Reserve Time"] != None):
         obj.startReserve = 0 if df.loc[values[i], "Start of Reserve Time"] == None else df.loc[values[i], "Start of Reserve Time"]
 
@@ -317,127 +357,117 @@ def Availibility(Foldername, machine):
     return obj
         
 
-def getMachine(df, id):
-        search = df['ID'].str.contains(id)
-        val = df[search].index
-
-        for i in range(len(val)):
-            r = df.loc[val[i], "Machine"]
-
-        return r
-
-
-def getTotalTime(obj):
-    total = getTimeDifference(obj.start, obj.end)
-    i = getTimeDifference(obj.startIPO, obj.endIPO)
-    
-    r = getTimeDifference(obj.startReserve, obj.endReserve)
-    return (total - (r + i)).seconds /60
-
-
-def search(Foldername, col, key, returnCell):
-    df = Reader(Foldername, False)
+def search(df, col, key, returnCell):
     index = df.loc[df[col] == key].index[0]
-
     return df.at[index, returnCell]
 
 
-def getTmDemand(Foldername, id, list, demand):
-    df = Reader(Foldername, False)
-    grade = search(Foldername, "ID", id, "Grade")
-    index = (df[(df["Grade"].isin([grade]) & df["Machine"].isin(["BI4 Machine", "TM3 Machine"]))]).index
-
-    Mppm = df.at[index[0], "ProductPerMinute"]
-
-
-    if(grade == "Grade1"):
-        list[0].time += getTMTime(Foldername, id, demand)
-        list[0].demand = (Mppm * list[0].time)
-        list[0].grade = "Grade1"
+def getTMTime(ref, TM):
+    def getIt(ref, ppm):
         
-
-    if(grade == "Grade2"):
-        list[1].time += getTMTime(Foldername, id, demand)
-        list[1].demand = (Mppm * list[1].time)
-        list[1].grade = "Grade2"
-
-
-    if(grade == "Grade3"):
-        list[2].time += getTMTime(Foldername, id, demand)
-        list[2].demand = (Mppm * list[2].time)
-        list[2].grade = "Grade3"
-        
-
-    if(grade == "Grade4"):
-        list[3].time += getTMTime(Foldername, id, demand)
-        list[3].demand = (Mppm * list[3].time)
-        list[3].grade = "Grade4"
-        
-
-    if(grade == "Grade5"):
-        list[4].time += getTMTime(Foldername, id, demand)
-        list[4].demand = (Mppm * list[4].time)
-        list[4].grade = "Grade5"
-        
-
-    if(grade == "Grade6"):
-        list[5].time += getTMTime(Foldername, id, demand)
-        list[5].demand = (Mppm * list[5].time)
-        list[5].grade = "Grade6"
-        
-
-    return tuple(list)
-
-
-def getTMTime(Foldername, id, demand):
-    machine = search(Foldername, "ID", id, "Machine")
-    grade = search(Foldername, "ID", id, "Grade")
-
-    sw = search(Foldername, "ID", id, "SheetWidth")
-
-    df = Reader(Foldername, False)
-    grade = search(week, "ID", id, "Grade")
-    index = (df[(df["Grade"].isin([grade]) & df["Machine"].isin(["BI4 Machine", "TM3 Machine"]))]).index
-
-    weight = df.at[index[0], "Weight"]
-    length = df.at[index[0], "Length"]
-    ppm = df.at[index[0], "ProductPerMinute"]
-
-    plies = search(Foldername, "ID", id, "Plies")
-    fpl = search(Foldername, "ID", id, "FeetPerLog")
-    rpl = search(Foldername, "ID", id, "RollPerLog")
-
-
-    if(machine == "CFR1 Parent Rolls"):
-        return ((weight * demand * 36_000) / (sw * ppm * 2204.62 * length))
+        if(ref["Machine"] == "CFR1 Parent Rolls"):
+            return ((ref["Weight"] * ref["Demand"] * 36000) / (ref["SheetWidth"] * ppm * 2204.62 * ref["Length"]))
     
-    elif(machine != "TM3 Machine" and machine != "BI4 Machine" and machine != "CFR1 Parent Rolls"):
-        return ((weight * demand * fpl * plies) / (3 * rpl * ppm * 2204.62 * length))
+        elif(ref["Machine"] != "TM3 Machine" and ref["Machine"] !=  "BI4 Machine" and ref["Machine"] != "CFR1 Parent Rolls"):
+            return ((ref["Weight"] * ref["Demand"] * ref["FeetPerLog"] * ref["Plies"]) / (3 * ref["RollPerLog"] * ppm * 2204.62 * ref["Length"]))
+        
+    g1 = g2 = g3 = g4 = g5 = g6 = 0
 
+    for index, row in ref.iterrows():
+        grade = row["Grade"]
+
+        if(grade == "Grade1"):
+            g1 += getIt(row, TM["ProductPerMinute"][2])
+        
+        if(grade == "Grade2"):
+            g2 += getIt(row, TM["ProductPerMinute"][0])
+        
+        if(grade == "Grade3"):
+            g3 += getIt(row, TM["ProductPerMinute"][3])
+        
+        if(grade == "Grade4"):
+            g4 += getIt(row, TM["ProductPerMinute"][1])
+        
+        if(grade == "Grade5"):
+            g5 += getIt(row, TM["ProductPerMinute"][5])
+        
+        if(grade == "Grade6"):
+            g6 += getIt(row, TM["ProductPerMinute"][4])
+
+    return (g1,g2,g3,g4,g5,g6)
+    
 
 week = "2024-09-06 Week 1"
-TmDemand = []
 
-for i in range(6):
-    TmDemand.append(DemandTm())
+def Scheduler(Foldername):
+    rd = Reader(Foldername, False)
+    av = Available(Foldername)
 
-for id, demand in demandReader(week):
-    getTmDemand(week, id, TmDemand, demand)
+    
+    startGrade = search(av, "Machine", "BI4 Machine", "Grade")
+    
+    for i in range(1):
+        if(startGrade == "Grade1"):
+            grade = rd.loc[rd["Grade"] == "Grade4"]
+            print(grade)
 
 
-for obj in TmDemand:
-    print(obj.grade, obj.demand, obj.time/60)
+            startGrade = "Grade4"
+    
+        if(startGrade == "Grade2"):
+            grade = rd.loc[rd["Grade"] == "Grade3"]
+            print(grade)
+
+
+            startGrade = "Grade3"
+
+        if(startGrade == "Grade3"):
+            grade = rd.loc[rd["Grade"] == "Grade1"]
+
+            startGrade = "Grade1"
+
+        if(startGrade == "Grade4"):
+            grade = rd.loc[rd["Grade"] == "Grade2"]
+
+
+            TM = av.loc[av["Machine"] == "BI4 Machine"]
+            machine = tuple(TM["Schedule"])
+
+            WI = av.loc[(av["Grade"] == "Grade2") & (av["Machine"] != "BI4 Machine")]
+            winder = tuple(WI["Schedule"])[0]
+
+            
+            for index, row in rd.itterows():
+                Build(row, winder, row["Machine"])
 
 
 
+            startGrade = "Grade2"
 
         
+        
+def toMilli(int):
+    return int * 60000
 
+def timeDifference(start, end):
+    return end - start
 
+def Build(df, schedule, machine):
+    if(len(schedule) == 1):
+        sect1 = timeDifference(schedule[0][0], schedule[0][1])
+        timeReq = toMilli(search(df, "Machine", machine, "Time"))
+        print(timeReq)
 
+    elif(len(schedule) == 2):
+        sect1 = timeDifference(schedule[0][0], schedule[0][1])
+        sect2 = timeDifference(schedule[1][0], schedule[1][1])
+        timeReq = toMilli(search(df, "Machine", machine, "Time"))
+        print(timeReq)
 
+    elif(len(schedule) == 3):
+        sect1 = timeDifference(schedule[0][0], schedule[0][1])
+        sect2 = timeDifference(schedule[1][0], schedule[1][1])
+        sect3 = timeDifference(schedule[2][0], schedule[2][1])
+        timeReq = toMilli(search(df, "Machine", machine, "Time"))
 
-
-
-
-
+Scheduler(week)
